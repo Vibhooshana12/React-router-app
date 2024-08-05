@@ -1,0 +1,43 @@
+.nav-item {
+    font-size:20px;
+}
+.nav-link{
+    position: relative;
+}
+.nav-link:hover {
+      color: hsl(162, 80%, 45%) !important;;
+}
+.nav-link:hover::after {
+    content:"";
+    width:75%;
+    height:4px;
+    background: hsl(162, 80%, 45%);
+    position: absolute;
+    bottom: -0.5px;
+    left:50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+@media screen and (max-width: 769px) {
+    .navbar-nav{
+      display: flex;
+      flex-direction: column;
+      align-items:flex-start;
+      justify-content: flex-start;
+      position: fixed;
+      top: 77px;
+      right: 0px;
+      width:250px;
+      background: #343a40;
+      box-shadow: 0 20px 40px #444644;
+    }
+    .nav-item{
+        padding-left: 17px;
+    }
+  }
+  .fa{
+    color: aliceblue;
+  }
+  .card-body{
+    text-align: start;
+  }
