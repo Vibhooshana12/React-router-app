@@ -1,70 +1,135 @@
-# Getting Started with Create React App
+# React Router App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project demonstrates the implementation of routing in a React application using react-router-dom. The design and navigation structure are inspired by the GUVI blog page. This app features a navigation menu for different courses like "All," "Full Stack Development," "Data Science," "Cyber Security," and "Career." Each route corresponds to a specific course category and displays static content relevant to that category.
 
-## Available Scripts
+## Demo
+Check out the live demo of the project [here](https://vibhooshana-reactrouter-app.netlify.app/)
 
-In the project directory, you can run:
 
-### `npm start`
+## Folder Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+reactrouter-app/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+├── node_modules/
 
-### `npm test`
+├── public/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+│   ├── favicon.ico
 
-### `npm run build`
+│   └── index.html
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+├── src/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+│   ├── components/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+│   │   ├── NavBar.jsx
 
-### `npm run eject`
+│   ├── data/
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+│   │   ├── Articles.jsx
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+│   ├── Routerpages/
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+│   │   ├── AllCourses.jsx
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+│   │   ├── FullStack.jsx
 
-## Learn More
+│   │   ├── DataScience.jsx
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+│   │   ├── CyberSecurity.jsx
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+│   │   ├── Career.jsx
 
-### Code Splitting
+│   ├── App.css
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+│   ├── App.jsx
 
-### Analyzing the Bundle Size
+│   ├── index.css
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+│   ├── index.js
 
-### Making a Progressive Web App
+├── .gitignore
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+├── package.json
 
-### Advanced Configuration
+├── README.md
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Project Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. Set up your React application:
 
-### `npm run build` fails to minify
+```bash
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+npx create-react-app reactrouter-app
+cd reactrouter-app
+
+```
+2. Install react-router-dom:
+
+```bash
+
+npm install react-router-dom
+
+```
+   
+3. Add Components
+
+Create the following components in the src/components directory:
+
+- `NavBar.jsx`: The sticky navigation bar component containing links to different course categories.
+  
+5. Add Data
+   
+- `Articles.js`: Contains data details of all the courses
+  
+4. Add Router Pages
+   
+- `AllCourses.jsx`:Displays content for all courses.
+  
+- `Career.jsx`: Displays content for career-related articles.
+  
+- `CyberSecurity.jsx`:Displays content for Cyber Security courses.
+  
+- `DataScience.jsx`: Displays content for Data Science courses
+  
+- `FullStack.jsx`: Displays content for Full Stack Development courses.
+
+5. Set up Routing in App.jsx
+   
+In the App.jsx file, configure routing using react-router-dom to link the components and pages.
+   
+6. Run the development server:
+
+To start the development server, use the following command:
+
+```bash
+
+npm start
+
+```
+  
+7. Open your browser and navigate to http://localhost:3000 to see the application.
+
+## Deployment
+
+To deploy your application:
+
+1. Build the project:
+
+```bash
+ npm run build
+
+```
+
+2. Deploy the `build` folder to Netlify.
+
+### Acknowledgements
+
+-React for providing a flexible JavaScript library for building user interfaces.
+
+-React Router for enabling dynamic routing in the application.
+
+-Bootstrap for styling and responsive design.
+
+-Netlify for hosting and deploying the application.
